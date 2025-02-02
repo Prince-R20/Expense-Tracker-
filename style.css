@@ -1,1 +1,88 @@
 /* Expense tracker style sheet */
+
+:root{
+    --color: blue;
+    --color-t: rgba(0, 0, 255,50%);
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    height: 100vh;
+}
+header{
+    padding: 15px;
+}
+header h1{
+    color: var(--color);
+    margin-bottom: 0;
+}
+header p{
+    margin: 0;
+    font-weight: bold;
+}
+#formSection{
+    margin-top: 20px;
+}
+#formSection form{
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    box-shadow: 2px 2px 5px var(--color-t);
+}
+#formSection form label{
+    font-weight: bold;
+    line-height: 30px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+}
+#formSection form label input, #formSection form label select{
+    padding: 10px 15px;
+    color: var(--color);
+    outline: none;
+}
+#formSection form label input::placeholder{
+    color: var(--color);
+}
+#addExpense{
+    background-color: var(--color);
+    margin-top: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+#expenseList{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    background-color: var(--color);
+    color: white;
+}
+#expenseList h3{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 5px 0 0 5px;
+}
+.category{
+    color: var(--color);
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.categoryList{
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+.categoryList p{
+    margin: 0;
+}
+.cancleExp{
+    color: red;
+    font-weight: bold;
+    background-color: unset;
+    border: none;
+}

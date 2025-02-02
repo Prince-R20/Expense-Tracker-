@@ -7,6 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Expense Tracker</h1>
+        <p><i>We've got your back: easy expense tracking for everyone.</i></p>
+    </header>
+    <section id="formSection">
+        <form>
+            <label for="description">Description:
+                <br>
+                <input name="description" id="descriptionInp" placeholder="Enter a description" required></input>
+            </label>
+            
+            <label for="amount">Amount:
+                <br>
+                <input type="number" name="amount" placeholder="Enter expense amount" id="amountInp" required>
+            </label>
+    
+            <label for="category">Category:
+                <br>
+                <select id="categoryInp" required>
+                    <option value="">Select a category</option>
+                    <option value="feeding">Food</option>
+                    <option value="clothing">Transportation</option>
+                    <option value="shelter">Entertainment</option>
+                    <option value="transport">Shopping</option>
+                    <option value="transport">Bills</option>
+                    <option value="transport">Others</option>
+                </select>
+            </label>
+            <button onclick="appendExpense()" id="addExpense">Add Expense</button>
+        </form>
+    </section>
+    <br>
+    <section id="expenseList">
+        <h3>Expense List</h3>
+        <hr>
+        <!-- <article class="category">
+            <h1 class="categoryHead">Food(Total: $50)</h1>
+            <ul>
+                <li>
+                    <div class="categoryList">
+                        <p>I want to buy food <br> $50</p>
+                        <button class="cancleExp">x</button>
+                    </div>
+                </li>
+            </ul>
+        </article> -->
+    </section>
     <script src="index.js"></script>
 </body>
 </html>
