@@ -50,6 +50,7 @@ function createCategoryDiv(){
         article.className = "category";
         article.id = category;
         h1.className = "categoryHead";
+        h1.id = `${category} ${category}`
 
         h1.textContent = `${category}`;
 
@@ -110,4 +111,19 @@ function updateExpenseListUI(){
     expenseArray.forEach(expense => {
         createExpenseElement(expense);
     })
+    getandcalulateTotal();
+}
+
+function getandcalulateTotal(){
+
+    for (const category of categories) {
+        let count = 0;
+        expenseArray.forEach(expense => {
+            if(expense.category == category){
+                count += Number(expense.amount);
+            }
+        })
+        const categoryEle = document.getElementById(`${category} ${category}`);
+        categoryEle.textContent += ` (Total: $${count})`
+    }
 }
