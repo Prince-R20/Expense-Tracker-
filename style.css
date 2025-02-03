@@ -47,7 +47,7 @@ header p{
 #formSection form label input::placeholder{
     color: var(--color);
 }
-#addExpense{
+#addExpenseBtn{
     background-color: var(--color);
     margin-top: 10px;
     border: none;
@@ -55,14 +55,17 @@ header p{
     font-weight: bold;
     font-size: 1rem;
 }
-#expenseList{
+#expenseListSec{
+    display: grid;
+    gap: 5px;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 10px;
+    padding-bottom: 10px;
     background-color: var(--color);
     color: white;
 }
-#expenseList h3{
+#expenseListSec h3{
     text-transform: uppercase;
     text-align: center;
     margin: 5px 0 0 5px;
@@ -80,7 +83,7 @@ header p{
 .categoryList p{
     margin: 0;
 }
-.cancleExp{
+.cancelExp{
     color: red;
     font-weight: bold;
     background-color: unset;

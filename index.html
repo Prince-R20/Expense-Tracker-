@@ -12,7 +12,7 @@
         <p><i>We've got your back: easy expense tracking for everyone.</i></p>
     </header>
     <section id="formSection">
-        <form>
+        <form action="#">
             <label for="description">Description:
                 <br>
                 <input name="description" id="descriptionInp" placeholder="Enter a description" required></input>
@@ -27,23 +27,25 @@
                 <br>
                 <select id="categoryInp" required>
                     <option value="">Select a category</option>
-                    <option value="feeding">Food</option>
-                    <option value="clothing">Transportation</option>
-                    <option value="shelter">Entertainment</option>
-                    <option value="transport">Shopping</option>
-                    <option value="transport">Bills</option>
-                    <option value="transport">Others</option>
+                    <option value="Food">Food</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Others">Others</option>
                 </select>
             </label>
-            <button onclick="appendExpense()" id="addExpense">Add Expense</button>
+            <button id="addExpenseBtn">Add Expense</button>
         </form>
     </section>
     <br>
-    <section id="expenseList">
+    <section id="expenseListSec">
         <h3>Expense List</h3>
-        <hr>
+        <hr width="100%">
+
+        <div id="expenseList" style="display: grid; gap: 10px;">
+        </div>
         <!-- <article class="category">
-            <h1 class="categoryHead">Food(Total: $50)</h1>
             <ul>
                 <li>
                     <div class="categoryList">
